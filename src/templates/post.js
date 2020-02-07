@@ -4,7 +4,7 @@ import Layout from "../components/layout";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Tag from "../components/tag";
 import Links from "../components/links";
-import { Author, Section, Title, TagsContainer } from './styles';
+import { Author, Section, Title, TagsContainer, DescriptionContainer } from './styles';
 
 export const queryPost = graphql`
   query($slug: String!) {
@@ -39,7 +39,7 @@ const PostTemplate = ({ data: { mdx: post } }) => {
           }
         </TagsContainer>
         <Links project={post.frontmatter.website, post.frontmatter.playStore, post.frontmatter.appStore} />
-        <MDXRenderer>{post.body}</MDXRenderer>
+        <DescriptionContainer><MDXRenderer>{post.body}</MDXRenderer></DescriptionContainer>
       </Section>
     </Layout>
   );

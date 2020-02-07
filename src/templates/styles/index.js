@@ -45,7 +45,6 @@ export const TagsContainer = styled.h4`
 `;
 
 export const DescriptionContainer = styled.div`
-    font-size: 1.5rem;
     line-height: 2.5rem;
     white-space: pre-wrap;
     pre {
