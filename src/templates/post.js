@@ -38,7 +38,7 @@ const PostTemplate = ({ data: { mdx: post } }) => {
             })
           }
         </TagsContainer>
-        <Links project={post.frontmatter.website, post.frontmatter.playStore, post.frontmatter.appStore} />
+        <Links project={{ website: post.frontmatter.website, playStore: post.frontmatter.playStore, appStore: post.frontmatter.appStore }} />
         <DescriptionContainer><MDXRenderer>{post.body}</MDXRenderer></DescriptionContainer>
       </Section>
     </Layout>
