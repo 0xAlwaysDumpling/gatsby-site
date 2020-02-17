@@ -8,10 +8,10 @@ const Section = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
-  margin: 0;
 `;
 
 const BlogContainer = styled.div`
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -31,18 +31,18 @@ const BlogPostRow = styled.div`
 `;
 
 const BlogPostTitle = styled(Link)`
-  color: ${ props => props.fontColor || 'black'};
+  color: ${ props => props.theme.buttonText};
   font-weight: 200px;
   margin: 0;
   text-decoration: none;
   &:hover {
-   color: ${ props => props.hoverFontColor || 'blue'};
+   color: ${ props => props.theme.buttonTextHover};
   } 
 `;
 
 const BlogPostDate = styled.div`
   margin: 0;
-  color: grey;
+  color: rgb(140, 140, 140);
 `;
 
 const formatDate = (date) => {

@@ -9,7 +9,7 @@ const ProductItemContainer = styled.div`
   max-width: 400px;
   width: 100%;
   margin-top: 10px;
-  background-color: white;
+  background-color: ${props => props.theme.background};
   border-radius: 0.65rem;
   padding: 1.0em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -31,13 +31,14 @@ const ProductItemContainer = styled.div`
 const ProductItemTitle = styled.h3`
     line-height: 1.5;
     font-size: 1.5rem;
-
+    color: ${props => props.theme.text};
 `;
 
 const ProductItemOneLiner = styled.h4`
     line-height: 1.75;
     font-size: 1.15rem;
     font-weight: 500;
+    color: ${props => props.theme.text};
 `;
 
 const TagsContainer = styled.h4`
@@ -48,7 +49,6 @@ const TagsContainer = styled.h4`
     user-select: none;
     line-height: 1;
     margin-bottom: 0;
-    color: rgba(0,0,0,.85);
     font-weight: 500;
     font-family: inherit;
 `;

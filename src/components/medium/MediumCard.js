@@ -8,8 +8,6 @@ const MediumCardContainer = styled.div`
     transform: none!important;
     overflow: visible;
     flex-basis: calc(50% - 1rem);
-    transition-timing-function: ease;
-    transition-duration: 1.5s;
     flex-grow: 0;
     flex-shrink: 0;
     margin-bottom: 2rem;
@@ -37,7 +35,7 @@ const MediumCardLink = styled.a`
 `;
 
 const MediumCardTitle = styled.h4`
-    color: rgb(0, 0, 0);
+    color: ${props => props.theme.text};
     font-weight: 700;
     line-height: 1.5;
     text-align: left;
@@ -45,12 +43,16 @@ const MediumCardTitle = styled.h4`
     margin-top: 0;
 `;
 
-const MediumCardDescription = styled.div`
-    color: rgb(136, 136, 136);
+const MediumCardDescription = styled.p`
+    color: ${props => props.theme.text};
     font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.5;
     text-align: left;
+    
+    a {
+     color: ${props => props.theme.text};
+    }
 `;
 
 const MediumCardImage = styled.div`

@@ -12,7 +12,7 @@ const Section = styled.div`
 const ProjectsContainer = styled.div`
     display: flex;
     flex-direction:column;
-    margin: 0;
+    margin-top: 20px;
 `
 
 const ProjectsHeader = styled.div`
@@ -20,7 +20,7 @@ const ProjectsHeader = styled.div`
 `;
 
 const ProjectsTitle = styled.h1`
-    color: rgb(0, 0, 0);
+    color: ${props => props.theme.text};
     font-weight: 900;
     line-height: 1;
     text-align: left;
@@ -31,7 +31,7 @@ const ProjectsTitle = styled.h1`
 `;
 
 const ProjectsDescription = styled.p`
-    color: rgb(85, 85, 85);
+    color: ${props => props.theme.text};
     font-weight: 400;
     line-height: 1.75;
     text-align: left;

@@ -11,7 +11,7 @@ const Section = styled.div`
 const ProductsContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin-top: 20px;
 `
 
 const ProductsHeader = styled.div`
@@ -19,7 +19,7 @@ const ProductsHeader = styled.div`
 `;
 
 const ProductsTitle = styled.h1`
-    color: rgb(0, 0, 0);
+    color: ${props => props.theme.text};
     font-weight: 900;
     line-height: 1;
     text-align: left;
@@ -30,7 +30,7 @@ const ProductsTitle = styled.h1`
 `;
 
 const ProductsDescription = styled.p`
-    color: rgb(85, 85, 85);
+    color: ${props => props.theme.text};
     font-weight: 400;
     line-height: 1.75;
     text-align: left;

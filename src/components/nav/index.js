@@ -4,14 +4,15 @@ import styled from "@emotion/styled";
 import ToggleButton from "../sidedrawer/ToggleButton";
 import NavLinks from "./NavLinks";
 
+
 const Header = styled.header`
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   height: 56px;
-  background: white;  
-  border-bottom: 1px solid #ddd;
+  background: ${props => props.theme.background};  
+  border-bottom: 1px solid ${props => props.theme.buttonBorder};
   z-index: 500;
 `;
 
@@ -46,6 +47,7 @@ const Logo = styled.div`
   margin-left: .5rem;
   a {
     text-decoration: none;
+    color: ${props => props.theme.text};
   }
   @media (max-width: 768px) {
     display: flex;

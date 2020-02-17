@@ -5,13 +5,11 @@ import Links from "../links";
 import Tag from "../tag";
 
 const FeaturedItemContainer = styled.div`
-  background-color: 'white';
+  background-color: ${props => props.theme.background};
   opacity: 1!important;
   transform: none!important;
   overflow: visible;
   flex-basis: calc(50% - 1rem);
-  transition-timing-function: ease;
-  transition-duration: 1.5s;
   flex-grow: 0;
   flex-shrink: 0;
   position: relative;
@@ -68,6 +66,7 @@ const FeaturedItemTitle = styled.h4`
     font-weight: 700;
     line-height: 1;
     margin-bottom: 2px;
+    color: ${props => props.theme.text};
 `;
 
 const FeaturedItemTagsContainer = styled.h4`
@@ -87,11 +86,15 @@ const FeaturedItemSummary = styled.p`
     font-weight: 400;
     line-height: 1.75 !important;
     max-width: 400px;
-    color: inherit;
+    color: ${props => props.theme.text};
     white-space: pre-wrap;
     line-height: inherit;
     overflow: hidden;
     text-align: left;
+
+    a {
+      color: ${props => props.theme.text};
+    }
 `;
 
 

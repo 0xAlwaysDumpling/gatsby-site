@@ -2,7 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useStaticQuery, graphql } from "gatsby";
-
+import { useTheme } from "emotion-theming";
 
 
 const SocialMediaLinksContainer = styled.div`
@@ -39,20 +39,20 @@ const SocialMediaLinks = () => {
     }
   `)
   const { githubUrl, linkedinUrl, mediumUrl, email } = userInfo.site.siteMetadata;
-
+  const theme = useTheme();
   return (
     <SocialMediaLinksContainer>
       <SocialLink href={githubUrl} style={{ 'marginLeft': '0!important' }}>
-        <FontAwesomeIcon icon={['fab', 'github']} color="black" width="24" />
+        <FontAwesomeIcon icon={['fab', 'github']} color={theme.text} width="24" />
       </SocialLink>
       <SocialLink href={linkedinUrl}>
-        <FontAwesomeIcon icon={['fab', 'linkedin']} color="#0077B5" width="24" />
+        <FontAwesomeIcon icon={['fab', 'linkedin']} color={theme.text} width="24" />
       </SocialLink>
       <SocialLink href={`mailto:${email}`}>
-        <FontAwesomeIcon icon={['fas', 'envelope']} color="black" width="24" />
+        <FontAwesomeIcon icon={['fas', 'envelope']} color={theme.text} width="24" />
       </SocialLink>
       <SocialLink href={mediumUrl} style={{ 'marginRight': '0!important' }}>
-        <FontAwesomeIcon icon={['fab', 'medium']} color="black" width="24" />
+        <FontAwesomeIcon icon={['fab', 'medium']} color={theme.text} width="24" />
       </SocialLink>
     </SocialMediaLinksContainer>
   )

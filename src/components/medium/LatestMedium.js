@@ -17,19 +17,6 @@ const Section = styled.div`
     -ms-flex-align: center;
 `;
 
-const LatestMediumBackgroundContainer = styled.div`
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    background-position: 50%!important;
-    background-repeat: no-repeat!important;
-    background-size: cover!important;
-    -webkit-transition: all .25s;
-    -o-transition: all .25s;
-    transition: all .25s;
-`;
 
 const LatestMediumContainer = styled.div`
     text-align: center;
@@ -43,21 +30,17 @@ const LatestMediumContainer = styled.div`
 `;
 
 const LatestMediumTitle = styled.h2`
-    color: rgb(0, 0, 0);
     font-weight: 900;
     line-height: 1;
     text-align: left;
     margin-bottom: 2rem;
     margin-top: 0;
+    color: ${props => props.theme.text};
 `;
 
-const LatestMediumSubtitle = styled.h3`
-    color: rgb(85, 85, 85);
-    font-weight: 400;
-    line-height: 1.75;
-    text-align: center;
-    margin: -3rem 0 2rem;
-    text-align: inherit;
+const LatestMediumTitleLink = styled.a`
+  text-decoration: 'underline';
+  color: ${props => props.theme.buttonText};
 `;
 
 const LatestMediumArticlesContainer = styled.div`
@@ -104,7 +87,7 @@ function LatestMedium() {
     <Section>
       <LatestMediumContainer>
         <LatestMediumTitle>
-          From <span><a href={mediumUrl} style={{ 'textDecoration': 'underline', color: 'black' }}>Medium</a></span>
+          From <span><LatestMediumTitleLink href={mediumUrl}>Medium</LatestMediumTitleLink></span>
         </LatestMediumTitle>
         <LatestMediumArticlesContainer>
           {

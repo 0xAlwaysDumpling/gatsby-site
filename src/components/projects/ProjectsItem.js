@@ -5,7 +5,7 @@ import Tag from "../tag";
 
 const ProjectsItemContainer = styled.div`
   width: 100%;
-  background-color: white;
+  background-color: ${props => props.theme.background};
   border-radius: 0.65rem;
   padding: 1.0em;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -15,10 +15,10 @@ const ProjectsItemContainer = styled.div`
   a {
     width: 100%;
     text-decoration: none;
-    color: black;
+    color: ${props => props.theme.buttonText};
     cursor: pointer;
     &:hover {
-      color: blue;
+      color: ${props => props.theme.buttonTextHover};
     }
     display: inline-flex;
     -webkit-box-flex: 0;
@@ -35,7 +35,6 @@ const ProjectsItemContainer = styled.div`
 const ProjectsItemTitle = styled.h3`
     line-height: 1.5;
     font-size: 1.5rem;
-
 `;
 
 const ProjectsItemOneLiner = styled.h4`

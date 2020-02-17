@@ -4,9 +4,9 @@ import styled from "@emotion/styled";
 
 
 const AboutContainer = styled.div`
-  background: white;
+  background: ${props => props.theme.background};
   max-width: 100%;
-  z-index: 1;
+  margin-top: 20px;
   animation: 'fadeFromAbove' 1s ease 0s 1 normal none;
 `;
 
@@ -14,8 +14,8 @@ const AboutName = styled.h1`
   font-weight: 900;
   line-height: 1.5;
   text-align: center;
-  margin-bottom: .5rem;
-  color: ${props => props.theme.black};
+  /* margin-bottom: .5rem; */
+  color: ${props => props.theme.text};
 `;
 
 
@@ -23,15 +23,13 @@ const AboutDescriptionContainer = styled.div`
     font-weight: 400;
     line-height: 1.75;
     text-align: center;
-    color: ${props => props.theme.black};
-    margin-top: 2rem;
+    color: ${props => props.theme.text};
     display: block;
     max-width: 100%;
 `;
 
 const AboutDescription = styled.div`
     max-width: 570px;
-    color: inherit;
     white-space: pre-wrap;
     line-height: inherit;
     display: inline-block;
@@ -58,9 +56,9 @@ const About = () => {
             I am a product focused software developer who spends too much time  💤 & 🔨.
           </AboutDescription>
         </AboutDescriptionContainer>
-        <SocialMediaLinks/>
-    </AboutContainer>
-  </Section>
+        <SocialMediaLinks />
+      </AboutContainer>
+    </Section>
   )
 }
 

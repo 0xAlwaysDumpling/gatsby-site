@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useTheme } from "emotion-theming";
 
 const LinksContainer = styled.div`
     padding: 0px 16px;
@@ -18,17 +19,19 @@ const Link = styled.a`
     align-items: center;
     transition: all .25s;
     margin: 1em;
+    color: ${props => props.theme.text};
 `;
 
 
 function Links({ project }) {
   const webLink = project.website ? project.website : project.directLink;
+  const theme = useTheme();
   return (
     <LinksContainer>
       {
         webLink ?
           <Link href={webLink} style={{ textDecoration: 'none', cursor: 'pointer' }}>
-            <FontAwesomeIcon icon={['fa', 'globe']} color="blue" width="24" />
+            <FontAwesomeIcon icon={['fa', 'globe']} color={theme.buttonText} width="24" />
           </Link>
           : ""
       }

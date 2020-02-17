@@ -9,8 +9,12 @@ export const Section = styled.div`
     max-width: 1100px;
 `;
 
+export const PostContainer = styled.div`
+    margin-top: 20px;
+`;
+
 export const Title = styled.h2`
-    color: rgb(0, 0, 0);
+    color: ${props => props.theme.text};
     font-weight: 900;
     line-height: 1;
     text-align: left;
@@ -21,7 +25,7 @@ export const Title = styled.h2`
 export const Author = styled.h3``;
 
 export const OneLiner = styled.p`
-    color: rgb(85, 85, 85);
+    color: ${props => props.theme.text};
     font-weight: 400;
     line-height: 1.75;
     text-align: left;
@@ -45,6 +49,7 @@ export const TagsContainer = styled.h4`
 `;
 
 export const DescriptionContainer = styled.div`
+    color: ${props => props.theme.text};
     line-height: 2.5rem;
     white-space: pre-wrap;
     pre {

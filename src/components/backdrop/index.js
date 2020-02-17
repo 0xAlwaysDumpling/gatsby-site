@@ -8,6 +8,7 @@ const Backdrop = styled.div`
   height: 100%;
   background: rgba(0,0,0,0.3);
   z-index: 100;
+  margin: 0;
 `;
 
 const Background = () => {
