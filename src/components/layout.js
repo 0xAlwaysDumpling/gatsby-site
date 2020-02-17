@@ -1,23 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from "prop-types"
-import { useStaticQuery, graphql } from "gatsby";
 import { Global, css } from "@emotion/core";
-import Header from "./header/";
+import Nav from "./nav";
+import SideDrawer from "./sidedrawer";
+import Backdrop from "./backdrop";
 
+export const SideDrawerContext = React.createContext();
 const Layout = ({ children }) => {
-  const siteMetaDataSiteTitleQuery = graphql`query SiteMetaDataQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-  `
-  const data = useStaticQuery(siteMetaDataSiteTitleQuery)
+  const [sideDrawerOpen, setDrawerState] = useState(false);
 
   return (
     <>
-      <Global 
+      <Global
         styles={css`
         * {
           box-sizing: border-box;
@@ -52,14 +46,18 @@ const Layout = ({ children }) => {
             margin-top: 0.25rem;
           }
         }
-      `}/>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <main css={css`
-          margin: 2rem auto 4rem;
+      `} />
+      <SideDrawerContext.Provider value={{ sideDrawerOpen, setDrawerState }}>
+        <Nav />
+        {sideDrawerOpen && <SideDrawer show={sideDrawerOpen} />}
+        {sideDrawerOpen && <Backdrop />}
+      </SideDrawerContext.Provider>
+      <main css={css`
+          margin: 5rem auto 4rem;
           max-width: 90vw;
         `}>
-          {children}
-        </main>
+        {children}
+      </main>
     </>
   )
 }

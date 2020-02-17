@@ -53,7 +53,7 @@ function ProductsLanding() {
         <ProductsHeader>
           <ProductsTitle>Products</ProductsTitle>
           <ProductsDescription>
-            Thoughts on purchases I've made (with my own money). And some stuff I was part of or my friends have made.
+            Random stuff I've bought and my thoughts on them. Some of these products are made by friends of mine!
           </ProductsDescription>
         </ProductsHeader>
         <ProductItemsContainer>
