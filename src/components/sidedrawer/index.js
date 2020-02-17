@@ -27,6 +27,7 @@ const NavigationItems = styled.div`
     flex-direction: column;
     justify-content: center;
     height: 100%;
+    align-items: center;
   }  
   li {
     padding: 0 0.5rem;

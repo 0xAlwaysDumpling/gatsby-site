@@ -4,6 +4,7 @@
 [x] Create Product Item Row  
 [x] Create Product Landing Page  
 [x] Make Navbar responsive (becomes snack on mobile)  
+[x] Clean up Navbar work  
 [ ] Add Dark Mode  
 [ ] Add Comments for Posts https://www.gatsbyjs.org/docs/adding-comments/  
 [ ] Add Google Analytics  

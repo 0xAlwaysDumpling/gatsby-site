@@ -20,6 +20,7 @@ const Navigation = styled.nav`
   height: 100%;
   align-items: center;
   padding: 0 1rem 1rem;
+  position: relative;
 `;
 
 const NavigationItems = styled.div`
@@ -45,6 +46,14 @@ const Logo = styled.div`
   margin-left: .5rem;
   a {
     text-decoration: none;
+  }
+  @media (max-width: 768px) {
+    display: flex;
+    right: 0;
+    position: absolute;
+    margin-right: 1rem;
+    margin-left: 0;
+    margin-top: .5rem;
   }
 `;
 
